@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Mukta', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+body
+{
+    background-color: #E7E8EE;
+}
+
+header
+{
+    display: block;
+    
+    border: 6px outset #4B58A6;
+    
+    background-color: #2738A1;
+    color: white;
+    
+    box-shadow: 0 5px 25px 8px rgba(0,0,0,0.2);
+}
+
+header div
+{
+    margin: 1em 0;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+a
+{
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+}
+
+header h1
+{   
+    display: block;
+    margin: auto 0;
+    padding: 0 0.3em;
+    
+    font-size: 3em;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+nav
+{
+    padding: 0 0.3em;
+    
+    margin: auto 0;
+}
+
+nav ul
+{
+    width: 100%;
+    
+    list-style: none;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav a
+{
+    height: 2em;
+    
+    display: block;
+    
+    margin: auto 0;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    border-color: #57C7C7;
+    
+    transition: 0.1s;
+    
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+nav a:last-of-type
+{
+    border-width: 0 2px;
+}
+
+nav a:hover
+{
+    background-color: #23307E;
+    color: lightgray;
+}
+
+nav a:active
+{
+    background-color: #1F2757;
+}
+
+nav #current
+{
+    border-width: 0;
+    border-radius: 4px;
+    background-color: #57C7C7;
+}
+
+nav #current + a
+{
+    border-left-width: 0;
+}
+
+nav li
+{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    
+    display: block;
+    
+    margin: 0 1em;
+}
+
+main
+{
+    width: 50%;
+    min-width: 32em;
+    
+    margin: 2em auto 3em 15%;
+    padding: 1.5em;
+    border: 8px solid #999EB9;
+    border-radius: 8px;
+    
+    background-color: #A9AEC8;
+    color: black;
+    
+    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.title
+{
+    font-size: 8em;
+    text-align: center;
+    
+    border-width: 0 0 4px;
+    border-color: #999EB9;
+    border-style: solid;
+}
+
+main h1 + div
+{
+    padding-left: 2em;
+}
+main h2 + div
+{
+    padding-left: 1em;
+}
+main h3 + div
+{
+    padding-left: 1em;
+}
+
+main h1
+{
+    margin-bottom: 0.2em;
+    
+    font-size: 4em;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+main h2
+{
+    margin-top: 1em;
+    margin-bottom: 0.1em;
+    
+    font-size: 2em;
+    font-weight: bold;
+}
+
+main h2:first-of-type
+{
+    margin-top: 0;
+}
+
+main h3
+{
+    margin-top: 0.6em;
+    margin-bottom: 0.1em;
+    
+    font-size: 1.5em;
+}
+
+main p
+{
+    color: #454545;
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+
+main p + p
+{
+    margin-top: 1em;
+}
+
+main ul
+{
+    list-style: none;
+}
+
+main li
+{
+    color: #454545;
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+
+main ul.bulleted
+{
+    padding-left: 0.5em;
+    
+    list-style: disc;
+}
+
+main a
+{
+    text-decoration: underline;
+    color: #439797;
+}
+
+main a:hover
+{
+    color: #68AFAF;
+}
+
+main a:active
+{
+    color: #57C7C7;
+}
+
+main a:visited
+{
+    color: #216666;
+}
+
+main aside
+{
+    padding: 0.5em;
+    
+    float: right;
+}
+
+main img
+{
+    display: block;
+    max-width: 100%;
+    
+    margin: 0 auto;
+    
+    border-radius: 5px;
+}
+
+.small
+{
+    display: none;
+}
+
+.large
+{
+    display: block;
+}
+
+main aside p
+{
+    font-size: 0.9em;
+    text-align: center;
+}
+
+section
+{
+    margin-top: 2em;
+}
+
+#game
+{
+    width: 800px;
+    height: 800px;
+    
+    margin: auto auto;
+    
+    background-color: darkslategrey;
+}
+
+@media all and (max-width: 900px)
+{
+    main
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media all and (max-width: 600px)
+{
+    body
+    {
+        font-size: 1.2em;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+    }
+    
+    nav a
+    {
+        border-width: 2px 0 0 0;
+    }
+    
+    nav a:last-of-type
+    {
+        border-width: 2px 0;
+    }
+    
+    nav #current + a
+    {
+        border-top-width: 0;
+    }
+    
+    main
+    {
+        width: 80%;
+        min-width: 9em;
+        
+        border-width: 4px;
+    }
+    
+    main h1
+    {
+        font-size: 3em;
+    }
+    
+    .title
+    {
+        font-size: 6em;
+    }
+    
+    main aside
+    {
+        float: none;
+        margin: 0 auto;
+    }
+    
+    .small
+    {
+        display: block;
+    }
+    
+    .large
+    {
+        display: none;
+    }
+}
